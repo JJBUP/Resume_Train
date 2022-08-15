@@ -43,7 +43,13 @@ RESUME_PATH = "./log/2022-08-15_21-22-40/LenetMnist9.pt"
 tensorboard_dir = path.split(RESUME_PATH)
 writer = tensorboard.SummaryWriter(tensorboard_dir)
 ```
+如果不将tensorboard 的log保存在同一个文件夹下，将是以下情景
 
+<img src="README.assets/image-20220815222256126.png" alt="image-20220815222256126" style="zoom:80%;" />
+
+<img src="README.assets/image-20220815222313811.png" alt="image-20220815222313811" style="zoom:80%;" />
+
+<img src="README.assets/image-20220815222333127.png" alt="image-20220815222333127" style="zoom:80%;" />
 
 
 具体应该保存什么应该看代码的形式，如没有schedule，而是根据epoch计算随时调整learing rate，这样只需要epoch即可
